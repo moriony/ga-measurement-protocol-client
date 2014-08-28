@@ -1,0 +1,34 @@
+<?php
+
+namespace Moriony\Google\Analytics\MeasurementProtocol\Hit;
+
+use Krizon\Google\Analytics\MeasurementProtocol\MeasurementProtocolClient;
+
+class Exception extends AbstractHit
+{
+    public function __construct(MeasurementProtocolClient $client, array $data = array())
+    {
+        parent::__construct($client, $data);
+        $this->setHitType(self::HIT_TYPE_EXCEPTION);
+    }
+
+    public function setExceptionDescription($description)
+    {
+        return $this->setData(self::FIELD_EXCEPTION_DESCRIPTION, $description);
+    }
+
+    public function getExceptionDescription()
+    {
+        return $this->getData(self::FIELD_EXCEPTION_DESCRIPTION);
+    }
+
+    public function setExceptionIsFatal($isFatal)
+    {
+        return $this->setData(self::FIELD_EXCEPTION_IS_FATAL, $isFatal);
+    }
+
+    public function getExceptionIsFatal()
+    {
+        return $this->getData(self::FIELD_EXCEPTION_IS_FATAL);
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "moriony/php-ga-measurement-protocol",
+    "description": "Google Analytics Measurement Protocol PHP Client wrapper",
+    "minimum-stability": "dev",
+    "require": {
+        "krizon/php-ga-measurement-protocol": "0.1.*",
+        "guzzle/guzzle": "~3.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=3.7.28"
+    },
+    "authors": [
+        {
+            "name": "Vitaliy Chesnokov",
+            "email": "demateus@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Moriony": "src/" }
+    },
+    "license": "MIT"
+}
