@@ -74,4 +74,10 @@ class EventTest extends GuzzleTestCase
         $this->hit->setAction('some_action');
         $this->assertSame('some_action', $this->hit->getAction());
     }
+
+    public function testLabel()
+    {
+        $this->hit->setLabel('some_label');
+        $this->assertSame('some_label', $this->hit->getLabel());
+    }
 }
