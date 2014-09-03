@@ -14,11 +14,6 @@ class AbstractHit implements HitInterface
         $this->client = $client;
     }
 
-    protected function prepareData()
-    {
-        return $this->data;
-    }
-
     /**
      * @param string $field
      * @param mixed $value
@@ -163,6 +158,6 @@ class AbstractHit implements HitInterface
     public function track()
     {
         $command = $this->getHitType();
-        return $this->client->$command($this->prepareData());
+        return $this->client->$command($this->getData());
     }
 }
