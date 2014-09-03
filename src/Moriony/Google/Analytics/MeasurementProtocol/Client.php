@@ -22,13 +22,13 @@ class Client
 
     /** @var  MeasurementProtocolClient */
     protected $client;
-    protected static $defaultOptions = [
+    protected static $defaultOptions = array(
         self::OPT_SSL => false,
         self::OPT_PLUGINS => array()
-    ];
-    protected static $requiredOptions = [
+    );
+    protected static $requiredOptions = array(
         self::OPT_TRACKING_ID,
-    ];
+    );
 
     public function __construct(array $options)
     {
