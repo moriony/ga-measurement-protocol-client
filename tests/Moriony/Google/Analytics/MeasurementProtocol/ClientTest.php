@@ -67,7 +67,7 @@ class ClientTest extends GuzzleTestCase
     {
         $mock = $this->getMockBuilder('Moriony\Google\Analytics\MeasurementProtocol\Plugin\PluginInterface')
             ->disableOriginalConstructor()
-            ->setMethods(['register'])
+            ->setMethods(array('register'))
             ->getMock();
 
         $mock->expects($this->once())
