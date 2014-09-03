@@ -2,6 +2,8 @@
 
 namespace Moriony\Google\Analytics\MeasurementProtocol;
 
+use Guzzle\Common\Collection;
+use Krizon\Google\Analytics\MeasurementProtocol\MeasurementProtocolClient;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\Event;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\Exception;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\HitInterface;
@@ -11,8 +13,6 @@ use Moriony\Google\Analytics\MeasurementProtocol\Hit\Social;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\Transaction;
 use Moriony\Google\Analytics\MeasurementProtocol\Plugin\DefaultData;
 use Moriony\Google\Analytics\MeasurementProtocol\Plugin\PluginInterface;
-use Guzzle\Common\Collection;
-use Krizon\Google\Analytics\MeasurementProtocol\MeasurementProtocolClient;
 
 class Client
 {
@@ -30,7 +30,7 @@ class Client
         self::OPT_TRACKING_ID,
     ];
 
-    public function __construct($options)
+    public function __construct(array $options)
     {
         $options = Collection::fromConfig($options, self::$defaultOptions, self::$requiredOptions);
         $this->client = MeasurementProtocolClient::factory(array(

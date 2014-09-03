@@ -7,7 +7,7 @@ use Krizon\Google\Analytics\MeasurementProtocol\MeasurementProtocolClient;
 class AbstractHit implements HitInterface
 {
     protected $client;
-    protected $data = [];
+    protected $data = array();
 
     public function __construct(MeasurementProtocolClient $client)
     {

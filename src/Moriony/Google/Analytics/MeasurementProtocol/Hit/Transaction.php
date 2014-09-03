@@ -6,9 +6,9 @@ use Krizon\Google\Analytics\MeasurementProtocol\MeasurementProtocolClient;
 
 class Transaction extends AbstractHit
 {
-    public function __construct(MeasurementProtocolClient $client, array $data = array())
+    public function __construct(MeasurementProtocolClient $client)
     {
-        parent::__construct($client, $data);
+        parent::__construct($client);
         $this->setHitType(self::HIT_TYPE_TRANSACTION);
     }
 
