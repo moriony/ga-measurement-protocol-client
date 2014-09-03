@@ -11,9 +11,9 @@ class ClientTest extends GuzzleTestCase
 
     public function setUp()
     {
-        $this->client = new Client([
+        $this->client = new Client(array(
             'tracking_id' => getenv('tracking_id'),
-        ]);
+        ));
     }
 
     public function testCreateEvent()
