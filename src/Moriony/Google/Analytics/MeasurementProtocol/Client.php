@@ -16,14 +16,14 @@ use Krizon\Google\Analytics\MeasurementProtocol\MeasurementProtocolClient;
 
 class Client
 {
-    const OPT_SLL = 'ssl';
+    const OPT_SSL = 'ssl';
     const OPT_TRACKING_ID = 'tracking_id';
     const OPT_PLUGINS = 'plugins';
 
     /** @var  MeasurementProtocolClient */
     protected $client;
     protected static $defaultOptions = [
-        self::OPT_SLL => false,
+        self::OPT_SSL => false,
         self::OPT_PLUGINS => array()
     ];
     protected static $requiredOptions = [
@@ -34,7 +34,7 @@ class Client
     {
         $options = Collection::fromConfig($options, self::$defaultOptions, self::$requiredOptions);
         $this->client = MeasurementProtocolClient::factory(array(
-            'ssl' => $options->get(self::OPT_SLL),
+            'ssl' => $options->get(self::OPT_SSL),
         ));
         $this->registerPlugin(new DefaultData(array(
             HitInterface::FIELD_VERSION => 1,

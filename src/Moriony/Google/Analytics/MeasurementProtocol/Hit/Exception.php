@@ -12,21 +12,35 @@ class Exception extends AbstractHit
         $this->setHitType(self::HIT_TYPE_EXCEPTION);
     }
 
+    /**
+     * @param string $description
+     * @return $this
+     */
     public function setExceptionDescription($description)
     {
         return $this->setData(self::FIELD_EXCEPTION_DESCRIPTION, $description);
     }
 
+    /**
+     * @return mixed
+     */
     public function getExceptionDescription()
     {
         return $this->getData(self::FIELD_EXCEPTION_DESCRIPTION);
     }
 
+    /**
+     * @param bool $isFatal
+     * @return $this
+     */
     public function setExceptionIsFatal($isFatal)
     {
-        return $this->setData(self::FIELD_EXCEPTION_IS_FATAL, $isFatal);
+        return $this->setData(self::FIELD_EXCEPTION_IS_FATAL, (bool) $isFatal);
     }
 
+    /**
+     * @return mixed
+     */
     public function getExceptionIsFatal()
     {
         return $this->getData(self::FIELD_EXCEPTION_IS_FATAL);

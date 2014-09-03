@@ -59,6 +59,6 @@ interface HitInterface
     const FIELD_EXCEPTION_DESCRIPTION = 'exd';
     const FIELD_EXCEPTION_IS_FATAL = 'exf';
 
-    public function __construct(MeasurementProtocolClient $client, array $data = array());
+    public function __construct(MeasurementProtocolClient $client);
     public function track();
 }

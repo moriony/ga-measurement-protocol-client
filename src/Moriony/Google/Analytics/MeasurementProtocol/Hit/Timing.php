@@ -12,46 +12,78 @@ class Timing extends AbstractHit
         $this->setHitType(self::HIT_TYPE_TIMING);
     }
 
+    /**
+     * @param string $category
+     * @return $this
+     */
     public function setCategory($category)
     {
         return $this->setData(self::FIELD_TIMING_CATEGORY, $category);
     }
 
+    /**
+     * @return mixed
+     */
     public function getCategory()
     {
         return $this->getData(self::FIELD_TIMING_CATEGORY);
     }
 
+    /**
+     * @param string $variable
+     * @return $this
+     */
     public function setVariable($variable)
     {
         return $this->setData(self::FIELD_TIMING_VARIABLE, $variable);
     }
 
+    /**
+     * @return mixed
+     */
     public function getVariable()
     {
         return $this->getData(self::FIELD_TIMING_VARIABLE);
     }
 
+    /**
+     * @param string $time
+     * @return $this
+     */
     public function setTime($time)
     {
         return $this->setData(self::FIELD_TIMING_TIME, $time);
     }
 
+    /**
+     * @return mixed
+     */
     public function getTime()
     {
         return $this->getData(self::FIELD_TIMING_TIME);
     }
 
+    /**
+     * @param string $label
+     * @return $this
+     */
     public function setLabel($label)
     {
         return $this->setData(self::FIELD_TIMING_LABEL, $label);
     }
 
+    /**
+     * @return mixed
+     */
     public function getLabel()
     {
         return $this->getData(self::FIELD_TIMING_LABEL);
     }
 
+    /**
+     * @param string $time
+     * @return $this
+     */
     public function setDnsLoadTime($time)
     {
         return $this->setData(self::FIELD_DNS_LOAD_TIME, $time);
