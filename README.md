@@ -7,6 +7,24 @@ Google Analytics Measurement Protocol PHP Client wrapper
 
 Google Analytics Measurement Protocol PHP client wrapper based on [krizon/php-ga-measurement-protocol](https://github.com/krizon/php-ga-measurement-protocol)
 
+Usage
+----------------------------------------------------------------------------------------
+
+```php
+$client = new \Moriony\Google\Analytics\MeasurementProtocol\Client([
+    Client::OPT_TRACKING_ID => 'UA-XXXXXXXXX-Y',
+    Client::OPT_SSL => true,
+]);
+
+$response = $client->createEvent()
+    ->setCustomerId(555)
+    ->setCategory('video')
+    ->setAction('play')
+    ->setLabel('holiday')
+    ->setValue(300)
+    ->track();
+```
+
 Testing
 ----------------------------------------------------------------------------------------
 
