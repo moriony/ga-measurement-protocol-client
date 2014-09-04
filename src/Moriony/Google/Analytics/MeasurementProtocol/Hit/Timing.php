@@ -89,46 +89,77 @@ class Timing extends AbstractHit
         return $this->setData(self::FIELD_DNS_LOAD_TIME, $time);
     }
 
+    /**
+     * @return mixed
+     */
     public function getDnsLoadTime()
     {
         return $this->getData(self::FIELD_DNS_LOAD_TIME);
     }
 
+    /**
+     * @param string $time
+     * @return $this
+     */
     public function setPageLoadTime($time)
     {
         return $this->setData(self::FIELD_PAGE_LOAD_TIME, $time);
     }
 
+    /**
+     * @return mixed
+     */
     public function getPageLoadTime()
     {
         return $this->getData(self::FIELD_PAGE_LOAD_TIME);
     }
 
+    /**
+     * @param string $time
+     * @return $this
+     */
     public function setRedirectTime($time)
     {
         return $this->setData(self::FIELD_REDIRECT_TIME, $time);
     }
 
+    /**
+     * @return mixed
+     */
     public function getRedirectTime()
     {
         return $this->getData(self::FIELD_REDIRECT_TIME);
     }
 
+    /**
+     * @param string $time
+     * @return $this
+     */
     public function setTcpConnectTime($time)
     {
         return $this->setData(self::FIELD_TCP_CONNECT_TIME, $time);
     }
 
+    /**
+     * @return mixed
+     */
     public function getTcpConnectTime()
     {
         return $this->getData(self::FIELD_TCP_CONNECT_TIME);
     }
 
+    /**
+     * @param string $time
+     * @return $this
+     */
     public function setServerResponseTime($time)
     {
         return $this->setData(self::FIELD_SERVER_RESPONSE_TIME, $time);
     }
 
+    /**
+     * @return mixed
+     */
     public function getServerResponseTime()
     {
         return $this->getData(self::FIELD_SERVER_RESPONSE_TIME);
