@@ -60,55 +60,55 @@ class TimingTest extends GuzzleTestCase
 
     public function testCategory()
     {
-        $this->hit->setCategory('some_Category');
-        $this->assertSame('some_Category', $this->hit->getCategory());
+        $this->hit->setCategory('some_category');
+        $this->assertSame('some_category', $this->hit->getCategory());
     }
 
     public function testVariable()
     {
-        $this->hit->setVariable('some_Variable');
-        $this->assertSame('some_Variable', $this->hit->getVariable());
+        $this->hit->setVariable('some_variable');
+        $this->assertSame('some_variable', $this->hit->getVariable());
     }
 
     public function testTime()
     {
-        $this->hit->setTime('some_Time');
-        $this->assertSame('some_Time', $this->hit->getTime());
+        $this->hit->setTime('some_time');
+        $this->assertSame('some_time', $this->hit->getTime());
     }
 
     public function testLabel()
     {
-        $this->hit->setLabel('some_Label');
-        $this->assertSame('some_Label', $this->hit->getLabel());
+        $this->hit->setLabel('some_label');
+        $this->assertSame('some_label', $this->hit->getLabel());
     }
 
     public function testDnsLoadTime()
     {
-        $this->hit->setDnsLoadTime('some_DnsLoadTime');
-        $this->assertSame('some_DnsLoadTime', $this->hit->getDnsLoadTime());
+        $this->hit->setDnsLoadTime('some_dns_load_time');
+        $this->assertSame('some_dns_load_time', $this->hit->getDnsLoadTime());
     }
 
     public function testPageLoadTime()
     {
-        $this->hit->setPageLoadTime('some_PageLoadTime');
-        $this->assertSame('some_PageLoadTime', $this->hit->getPageLoadTime());
+        $this->hit->setPageLoadTime('some_page_load_time');
+        $this->assertSame('some_page_load_time', $this->hit->getPageLoadTime());
     }
 
     public function testRedirectTime()
     {
-        $this->hit->setRedirectTime('some_RedirectTime');
-        $this->assertSame('some_RedirectTime', $this->hit->getRedirectTime());
+        $this->hit->setRedirectTime('some_redirect_time');
+        $this->assertSame('some_redirect_time', $this->hit->getRedirectTime());
     }
 
     public function testTcpConnectTime()
     {
-        $this->hit->setTcpConnectTime('some_TcpConnectTime');
-        $this->assertSame('some_TcpConnectTime', $this->hit->getTcpConnectTime());
+        $this->hit->setTcpConnectTime('some_tcp_connect_time');
+        $this->assertSame('some_tcp_connect_time', $this->hit->getTcpConnectTime());
     }
 
     public function testServerResponseTime()
     {
-        $this->hit->setServerResponseTime('some_ServerResponseTime');
-        $this->assertSame('some_ServerResponseTime', $this->hit->getServerResponseTime());
+        $this->hit->setServerResponseTime('some_server_response_time');
+        $this->assertSame('some_server_response_time', $this->hit->getServerResponseTime());
     }
 }
