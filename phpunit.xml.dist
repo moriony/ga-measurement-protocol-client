@@ -18,6 +18,10 @@
     <filter>
         <whitelist>
             <directory suffix=".php">src/Moriony/Google/Analytics/MeasurementProtocol/</directory>
+            <exclude>
+                <file>src/Moriony/Google/Analytics/MeasurementProtocol/Hit/HitInterface.php</file>
+                <file>src/Moriony/Google/Analytics/MeasurementProtocol/Plugin/PluginInterface.php</file>
+            </exclude>
         </whitelist>
     </filter>
     <php>
