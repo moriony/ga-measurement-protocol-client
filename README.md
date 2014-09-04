@@ -11,7 +11,9 @@ Usage
 ----------------------------------------------------------------------------------------
 
 ```php
-$client = new \Moriony\Google\Analytics\MeasurementProtocol\Client([
+use \Moriony\Google\Analytics\MeasurementProtocol\Client;
+
+$client = new Client([
     Client::OPT_TRACKING_ID => 'UA-XXXXXXXXX-Y',
     Client::OPT_SSL => true,
 ]);
