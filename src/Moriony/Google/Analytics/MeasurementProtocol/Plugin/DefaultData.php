@@ -19,11 +19,13 @@ class DefaultData implements PluginInterface
     public function register($client)
     {
         $data = & $this->data;
-        $client->getEventDispatcher()->addListener('command.before_prepare', function (\Guzzle\Common\Event $e) use($data) {
+        $client->getEventDispatcher()->addListener('command.before_prepare', function ($e) use($data) {
             /** @var \Guzzle\Service\Command\OperationCommand $command */
             $command = $e['command'];
             foreach ($data as $key => $val) {
-                $command->set($key, $val);
+                if (!$command->hasKey($key)) {
+                    $command->set($key, $val);
+                }
             }
         });
     }

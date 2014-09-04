@@ -4,6 +4,9 @@ namespace Moriony\Google\Analytics\MeasurementProtocol\Hit;
 
 use Krizon\Google\Analytics\MeasurementProtocol\MeasurementProtocolClient;
 
+/**
+ * @codeCoverageIgnore
+ */
 interface HitInterface
 {
     const HIT_TYPE_PAGE_VIEW = 'pageview';
