@@ -23,7 +23,7 @@ class DefaultDataTest extends GuzzleTestCase
             'test_key' => 'test_value'
         ));
         $command = new OperationCommand();
-        $event = new Event(['command' => $command]);
+        $event = new Event(array('command' => $command));
 
         $plugin->register($this->client);
         $this->client->getEventDispatcher()->dispatch('command.before_prepare', $event);
@@ -38,7 +38,7 @@ class DefaultDataTest extends GuzzleTestCase
         ));
         $command = new OperationCommand();
         $command->set('test_key', 'already_stated_value');
-        $event = new Event(['command' => $command]);
+        $event = new Event(array('command' => $command));
 
         $plugin->register($this->client);
         $this->client->getEventDispatcher()->dispatch('command.before_prepare', $event);
