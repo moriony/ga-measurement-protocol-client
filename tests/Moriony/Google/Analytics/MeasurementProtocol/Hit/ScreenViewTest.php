@@ -68,6 +68,12 @@ class ScreenViewTest extends GuzzleTestCase
         $this->assertSame('some_app_id', $this->hit->getAppId());
     }
 
+    public function testAppInstallerId()
+    {
+        $this->hit->setAppInstallerId('some_app_installer_id');
+        $this->assertSame('some_app_installer_id', $this->hit->getAppInstallerId());
+    }
+
     public function testContentDescription()
     {
         $this->hit->setContentDescription('some_content_description');
