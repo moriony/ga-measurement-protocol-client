@@ -19,5 +19,10 @@
     "autoload": {
         "psr-0": { "Moriony": "src/" }
     },
-    "license": "MIT"
+    "license": "MIT",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
 }
