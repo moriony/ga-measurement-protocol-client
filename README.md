@@ -7,6 +7,15 @@ Google Analytics Measurement Protocol PHP Client wrapper
 
 Google Analytics Measurement Protocol PHP client wrapper based on [krizon/php-ga-measurement-protocol](https://github.com/krizon/php-ga-measurement-protocol)
 
+See [Google Analytics Measurement Protocol documentation](https://developers.google.com/analytics/devguides/collection/protocol/v1/devguide)
+
+Installation
+-------------------------------------------------------------------------------------------
+Use [Composer](http://getcomposer.org/doc/00-intro.md) to add this library to your dependencies:
+```bash
+$ php composer.phar require moriony/php-ga-measurement-protocol:dev-master
+```
+
 Usage
 ----------------------------------------------------------------------------------------
 
