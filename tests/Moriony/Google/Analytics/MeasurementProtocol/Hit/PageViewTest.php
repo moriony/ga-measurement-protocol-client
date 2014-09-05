@@ -35,13 +35,13 @@ class PageViewTest extends GuzzleTestCase
             ->with(array(
                 't' => 'pageview',
                 'dh' => 'some_hostname',
-                'dp' => 'some_page',
+                'dp' => 'some_path',
                 'dt' => 'some_title',
             ));
 
         $this->hit
             ->setDocumentHostname('some_hostname')
-            ->setPage('some_page')
+            ->setDocumentPath('some_path')
             ->setTitle('some_title')
             ->track();
     }
@@ -52,10 +52,10 @@ class PageViewTest extends GuzzleTestCase
         $this->assertSame('some_hostname', $this->hit->getDocumentHostname());
     }
 
-    public function testPage()
+    public function testDocumentPath()
     {
-        $this->hit->setPage('some_page');
-        $this->assertSame('some_page', $this->hit->getPage());
+        $this->hit->setDocumentPath('some_path');
+        $this->assertSame('some_path', $this->hit->getDocumentPath());
     }
 
     public function testTitle()

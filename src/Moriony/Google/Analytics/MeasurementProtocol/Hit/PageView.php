@@ -30,20 +30,20 @@ class PageView extends AbstractHit
     }
 
     /**
-     * @param string $page
+     * @param string $path
      * @return $this
      */
-    public function setPage($page)
+    public function setDocumentPath($path)
     {
-        return $this->setData(self::FIELD_DOCUMENT_PAGE, $page);
+        return $this->setData(self::FIELD_DOCUMENT_PATH, $path);
     }
 
     /**
      * @return mixed
      */
-    public function getPage()
+    public function getDocumentPath()
     {
-        return $this->getData(self::FIELD_DOCUMENT_PAGE);
+        return $this->getData(self::FIELD_DOCUMENT_PATH);
     }
 
     /**

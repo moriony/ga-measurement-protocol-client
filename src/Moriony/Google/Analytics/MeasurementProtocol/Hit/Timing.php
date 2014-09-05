@@ -101,17 +101,17 @@ class Timing extends AbstractHit
      * @param string $time
      * @return $this
      */
-    public function setPageLoadTime($time)
+    public function setPageDownloadTime($time)
     {
-        return $this->setData(self::FIELD_PAGE_LOAD_TIME, $time);
+        return $this->setData(self::FIELD_PAGE_DOWNLOAD_TIME, $time);
     }
 
     /**
      * @return mixed
      */
-    public function getPageLoadTime()
+    public function getPageDownloadTime()
     {
-        return $this->getData(self::FIELD_PAGE_LOAD_TIME);
+        return $this->getData(self::FIELD_PAGE_DOWNLOAD_TIME);
     }
 
     /**

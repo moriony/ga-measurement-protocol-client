@@ -39,7 +39,7 @@ class TimingTest extends GuzzleTestCase
                 'utt' => 'some_time',
                 'utl' => 'some_label',
                 'dns' => 'some_dns_load_time',
-                'pdt' => 'some_page_load_time',
+                'pdt' => 'some_page_download_time',
                 'rrt' => 'some_redirect_time',
                 'tcp' => 'some_tcp_connect_time',
                 'srt' => 'some_server_response_time',
@@ -51,7 +51,7 @@ class TimingTest extends GuzzleTestCase
             ->setTime('some_time')
             ->setLabel('some_label')
             ->setDnsLoadTime('some_dns_load_time')
-            ->setPageLoadTime('some_page_load_time')
+            ->setPageDownloadTime('some_page_download_time')
             ->setRedirectTime('some_redirect_time')
             ->setTcpConnectTime('some_tcp_connect_time')
             ->setServerResponseTime('some_server_response_time')
@@ -88,10 +88,10 @@ class TimingTest extends GuzzleTestCase
         $this->assertSame('some_dns_load_time', $this->hit->getDnsLoadTime());
     }
 
-    public function testPageLoadTime()
+    public function testPageDownloadTime()
     {
-        $this->hit->setPageLoadTime('some_page_load_time');
-        $this->assertSame('some_page_load_time', $this->hit->getPageLoadTime());
+        $this->hit->setPageDownloadTime('some_page_download_time');
+        $this->assertSame('some_page_download_time', $this->hit->getPageDownloadTime());
     }
 
     public function testRedirectTime()
