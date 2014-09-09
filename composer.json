@@ -1,5 +1,5 @@
 {
-    "name": "moriony/php-ga-measurement-protocol",
+    "name": "moriony/ga-measurement-protocol-client",
     "description": "Google Analytics Measurement Protocol PHP Client wrapper",
     "minimum-stability": "dev",
     "require": {
