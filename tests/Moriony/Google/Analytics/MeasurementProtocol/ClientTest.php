@@ -46,6 +46,16 @@ class ClientTest extends GuzzleTestCase
         $this->assertInstanceOf('Moriony\Google\Analytics\MeasurementProtocol\Hit\Exception', $this->client->createException());
     }
 
+    public function testCreateTiming()
+    {
+        $this->assertInstanceOf('Moriony\Google\Analytics\MeasurementProtocol\Hit\Timing', $this->client->createTiming());
+    }
+
+    public function testCreateScreenView()
+    {
+        $this->assertInstanceOf('Moriony\Google\Analytics\MeasurementProtocol\Hit\ScreenView', $this->client->createScreenView());
+    }
+
     public function testRegisterPlugin()
     {
         $mock = $this->createPluginMock();

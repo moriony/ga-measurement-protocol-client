@@ -9,7 +9,9 @@ use Moriony\Google\Analytics\MeasurementProtocol\Hit\Exception;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\HitInterface;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\Item;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\PageView;
+use Moriony\Google\Analytics\MeasurementProtocol\Hit\ScreenView;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\Social;
+use Moriony\Google\Analytics\MeasurementProtocol\Hit\Timing;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\Transaction;
 use Moriony\Google\Analytics\MeasurementProtocol\Plugin\DefaultData;
 use Moriony\Google\Analytics\MeasurementProtocol\Plugin\PluginInterface;
@@ -89,5 +91,15 @@ class Client
     public function createException()
     {
         return new Exception($this->client);
+    }
+
+    public function createTiming()
+    {
+        return new Timing($this->client);
+    }
+
+    public function createScreenView()
+    {
+        return new ScreenView($this->client);
     }
 }
