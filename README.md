@@ -8,7 +8,7 @@ Google Analytics Measurement Protocol PHP Client wrapper
 [![Total Downloads](https://poser.pugx.org/moriony/ga-measurement-protocol-client/downloads.svg)](https://packagist.org/packages/moriony/ga-measurement-protocol-client) [![Latest Unstable Version](https://poser.pugx.org/moriony/ga-measurement-protocol-client/v/unstable.svg)](https://packagist.org/packages/moriony/ga-measurement-protocol-client) 
 [![License](https://poser.pugx.org/moriony/ga-measurement-protocol-client/license.svg)](https://packagist.org/packages/moriony/ga-measurement-protocol-client)
 
-Google Analytics Measurement Protocol PHP client wrapper based on [krizon/ga-measurement-protocol-client](https://github.com/krizon/ga-measurement-protocol-client)
+Google Analytics Measurement Protocol PHP client wrapper based on [krizon/php-ga-measurement-protocol](https://github.com/krizon/php-ga-measurement-protocol)
 
 See [Google Analytics Measurement Protocol documentation](https://developers.google.com/analytics/devguides/collection/protocol/v1/devguide)
 
