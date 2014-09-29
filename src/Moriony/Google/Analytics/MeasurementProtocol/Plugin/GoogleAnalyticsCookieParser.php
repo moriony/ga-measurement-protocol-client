@@ -22,12 +22,13 @@ class GoogleAnalyticsCookieParser implements PluginInterface
      */
     public function register($client)
     {
-        $client->getEventDispatcher()->addListener('command.before_prepare', function ($e) {
-            if (!array_key_exists($this->cookieName, $_COOKIE)) {
+        $cookieName = $this->cookieName;
+        $client->getEventDispatcher()->addListener('command.before_prepare', function ($e) use($cookieName) {
+            if (!array_key_exists($cookieName, $_COOKIE)) {
                 return;
             }
             $parser = new Parser();
-            $data = $parser->parse($_COOKIE[$this->cookieName]);
+            $data = $parser->parse($_COOKIE[$cookieName]);
 
             /** @var \Guzzle\Service\Command\OperationCommand $command */
             $command = $e['command'];
