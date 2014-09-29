@@ -13,7 +13,7 @@ use Moriony\Google\Analytics\MeasurementProtocol\Hit\ScreenView;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\Social;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\Timing;
 use Moriony\Google\Analytics\MeasurementProtocol\Hit\Transaction;
-use Moriony\Google\Analytics\MeasurementProtocol\Plugin\DefaultData;
+use Moriony\Google\Analytics\MeasurementProtocol\Plugin\DataSetter;
 use Moriony\Google\Analytics\MeasurementProtocol\Plugin\PluginInterface;
 
 class Client
@@ -38,7 +38,7 @@ class Client
         $this->client = MeasurementProtocolClient::factory(array(
             'ssl' => $options->get(self::OPT_SSL),
         ));
-        $this->registerPlugin(new DefaultData(array(
+        $this->registerPlugin(new DataSetter(array(
             HitInterface::FIELD_VERSION => 1,
             HitInterface::FIELD_TRACKING_ID => $options->get(self::OPT_TRACKING_ID)
         )));

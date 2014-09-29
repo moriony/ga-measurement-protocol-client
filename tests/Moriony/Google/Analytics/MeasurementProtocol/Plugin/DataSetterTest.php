@@ -7,7 +7,7 @@ use Krizon\Google\Analytics\MeasurementProtocol\MeasurementProtocolClient;
 use Guzzle\Service\Command\OperationCommand;
 use Guzzle\Common\Event;
 
-class DefaultDataTest extends GuzzleTestCase
+class DataSetterTest extends GuzzleTestCase
 {
     /** @var MeasurementProtocolClient $client */
     protected $client;
@@ -19,7 +19,7 @@ class DefaultDataTest extends GuzzleTestCase
 
     public function testSuccessfulSet()
     {
-        $plugin = new DefaultData(array(
+        $plugin = new DataSetter(array(
             'test_key' => 'test_value'
         ));
         $command = new OperationCommand();
@@ -33,7 +33,7 @@ class DefaultDataTest extends GuzzleTestCase
 
     public function testAlreadyStated()
     {
-        $plugin = new DefaultData(array(
+        $plugin = new DataSetter(array(
             'test_key' => 'test_value'
         ));
         $command = new OperationCommand();
@@ -44,5 +44,20 @@ class DefaultDataTest extends GuzzleTestCase
         $this->client->getEventDispatcher()->dispatch('command.before_prepare', $event);
 
         $this->assertSame('already_stated_value', $command->get('test_key'));
+    }
+
+    public function testForceSet()
+    {
+        $plugin = new DataSetter(array(
+            'test_key' => 'test_value'
+        ), true);
+        $command = new OperationCommand();
+        $command->set('test_key', 'already_stated_value');
+        $event = new Event(array('command' => $command));
+
+        $plugin->register($this->client);
+        $this->client->getEventDispatcher()->dispatch('command.before_prepare', $event);
+
+        $this->assertSame('test_value', $command->get('test_key'));
     }
 }
