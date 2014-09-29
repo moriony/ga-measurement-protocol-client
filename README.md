@@ -3,7 +3,10 @@ Google Analytics Measurement Protocol PHP Client wrapper
 
 [![Build Status](https://travis-ci.org/moriony/ga-measurement-protocol-client.svg?branch=master)](https://travis-ci.org/moriony/ga-measurement-protocol-client)
 [![Coverage Status](https://coveralls.io/repos/moriony/ga-measurement-protocol-client/badge.png?branch=master)](https://coveralls.io/r/moriony/ga-measurement-protocol-client?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/moriony/ga-measurement-protocol-client/v/stable.svg)](https://packagist.org/packages/moriony/ga-measurement-protocol-client) [![Total Downloads](https://poser.pugx.org/moriony/ga-measurement-protocol-client/downloads.svg)](https://packagist.org/packages/moriony/ga-measurement-protocol-client) [![Latest Unstable Version](https://poser.pugx.org/moriony/ga-measurement-protocol-client/v/unstable.svg)](https://packagist.org/packages/moriony/ga-measurement-protocol-client) [![License](https://poser.pugx.org/moriony/ga-measurement-protocol-client/license.svg)](https://packagist.org/packages/moriony/ga-measurement-protocol-client)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/27ce943c-f104-4947-bbfa-b6e7f0d3d0f1/mini.png)](https://insight.sensiolabs.com/projects/27ce943c-f104-4947-bbfa-b6e7f0d3d0f1)
+[![Latest Stable Version](https://poser.pugx.org/moriony/ga-measurement-protocol-client/v/stable.svg)](https://packagist.org/packages/moriony/ga-measurement-protocol-client) 
+[![Total Downloads](https://poser.pugx.org/moriony/ga-measurement-protocol-client/downloads.svg)](https://packagist.org/packages/moriony/ga-measurement-protocol-client) [![Latest Unstable Version](https://poser.pugx.org/moriony/ga-measurement-protocol-client/v/unstable.svg)](https://packagist.org/packages/moriony/ga-measurement-protocol-client) 
+[![License](https://poser.pugx.org/moriony/ga-measurement-protocol-client/license.svg)](https://packagist.org/packages/moriony/ga-measurement-protocol-client)
 
 Google Analytics Measurement Protocol PHP client wrapper based on [krizon/ga-measurement-protocol-client](https://github.com/krizon/ga-measurement-protocol-client)
 
